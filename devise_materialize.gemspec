@@ -1,7 +1,8 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
+lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'devise_materialize/version'
+require "devise_materialize/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "devise_materialize"
@@ -17,13 +18,13 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "https://rubygems.org"
+    spec.metadata["allowed_push_host"] = "https://rubygems.org"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
           "public gem pushes."
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+  spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
 

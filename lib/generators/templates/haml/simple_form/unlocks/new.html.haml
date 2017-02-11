@@ -1,0 +1,12 @@
+%span.card-title.center Resend Unlock Instructions
+.divider
+= simple_form_for resource, as: resource_name, url: unlock_path(resource_name),
+  html: { method: :post } do |f|
+  - if devise_error_messages? || alert
+    .form-errors.red.lighten-1
+      = devise_error_messages!
+      = alert
+  .form-inputs.row
+    = f.input :email, autofocus: true, required: true
+  .form-actions.center
+    = f.button :submit, "Resend Unlock Instructions"
