@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.description   = "This Gem provides a generator for Materialize styled " \
                        "Devise Views in HAML, SLIM, and ERB format with " \
                        "standard Form or simple form functionality"
-  spec.homepage      = "https://github/techgurupezza/devise_materialize"
+  spec.homepage      = "https://github.com/techgurupezza/devise_materialize"
   spec.license       = "MIT"
 
   if spec.respond_to?(:metadata)
