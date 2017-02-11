@@ -5,6 +5,7 @@ machine:
 
 dependencies:
   pre:
+    - gem update --system
     - gem install rainbow -v "2.2.1"
     - gem install bundler
 
