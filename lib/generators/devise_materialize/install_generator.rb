@@ -13,6 +13,7 @@ module DeviseMaterialize
                                    "from erb, haml, or slim"
 
     def generate_views
+      binding.pry
       if options.simple_form
         simple_form_views(options.template_engine.downcase)
       else
