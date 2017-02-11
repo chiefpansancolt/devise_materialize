@@ -16,7 +16,7 @@ module DeviseMaterialize
 
     def generate_views
       puts "Generating Views"
-      directory "#{view_engine.downcase}/#{form_engine}",
+      directory "#{options.view_engine.downcase}/#{options.form_engine}",
                 "app/views/#{namespace.downcase}"
     end
   end
