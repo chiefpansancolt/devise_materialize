@@ -5,7 +5,7 @@ module DeviseMaterialize
 
     desc "Creates a Devise Materialize Styled Views"
     argument :namespace, type: :string, defualt: "Users"
-    class_option :simple_form, type: :boolean, default: false, alias: "-s",
+    class_option :simple_form, type: :boolean, default: false,
                                description: "Define if simple form is used " \
                                "to load views built with simple form"
     class_option :template_engine, type: :string, default: "erb", alias: "-e",
@@ -13,7 +13,6 @@ module DeviseMaterialize
                                    "from erb, haml, or slim"
 
     def generate_views
-      binding.pry
       if options.simple_form
         simple_form_views(options.template_engine.downcase)
       else
