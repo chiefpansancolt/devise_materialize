@@ -1,39 +1,69 @@
-# DeviseMaterialize
+# Devise Materialize
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/devise_materialize`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Devise Materialize gem is here to generate you devise view in a materialize styled format with or w/o simple_form.
+This gem is not intended to live forever in your gemfile. It must be in your gemfile to load the resources needed from the generator.
+Below in the installation section will detail out which gems to install for all to work.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add these lines to your application's Gemfile:
 
 ```ruby
-gem 'devise_materialize'
+# Required gems so you don't have to add files manually
+gem "devise"
+gem "materialize-sass"
+gem "material_icons"
+
+# Required if using HAML
+gem "haml"
+
+# required if using Slim
+gem "slim"
+
+# required if using Simple Form
+gem "simple_form"
+
+gem "devise_materialize", "~>1.0.0"
 ```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install devise_materialize
 
 ## Usage
 
-TODO: Write usage instructions here
+[devise](https://github.com/plataformatec/devise), [materialize-sass](https://github.com/mkhairi/materialize-sass) and [material_icons](https://github.com/Angelmmiguel/material_icons) are required in your gemfile to enable the views to generate without error and in the proper style.
+
+| Command Line Flags | Description                            | Defaults | Options                  |
+| ------------------ | -------------------------------------- | -------- | ------------------------ |
+| NAMESPACE          | What is the model name used for devise | Devise   | Devise, Users, Admins, etc |
+| --form-engine      | Define a form Engine to use            | default  | default, simple_form     |
+| --view-engine      | Define a View Engine to use            | erb      | erb, haml, slim          |
+
+### Basic Usage
+
+```bash
+$ rails g devise_materialize:install
+```
+This will generate the basic views of devise based on defaults
+
+### Parameters Defined
+
+If you plan to use simple form using this gem [simple_form_materialize](https://github.com/techgurupezza/simple_form_materialize) to install a config file with all wrappers defined as used in this gem.
+
+```bash
+$ rails g devise_materialize:install Users --form-engine simple_form --view-engine haml
+```
+This will generate the views in simple form usage and HAML syntax
 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake build`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/techgurupezza/devise_materialize. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
+1. Fork Repo and create new branch
+2. Once all is changed and committed create a pull request. Ensure all merge conflicts are fixed and CI is passing.
 
 ## License
 
