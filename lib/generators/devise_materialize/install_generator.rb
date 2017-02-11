@@ -15,7 +15,7 @@ module DeviseMaterialize
                                "from erb, haml, or slim"
 
     def generate_views
-      puts "Generating Views"
+      puts "Generating Views ....."
       directory "#{options.view_engine.downcase}/#{options.form_engine}",
                 "app/views/#{namespace.downcase}"
     end
