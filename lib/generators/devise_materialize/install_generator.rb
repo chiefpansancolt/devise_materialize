@@ -15,9 +15,13 @@ module DeviseMaterialize
                                "(erb, haml, or slim)"
 
     def generate_views
-      puts "Generating Views....."
+      puts "Generating Views..."
       directory "#{options.view_engine.downcase}/#{options.form_engine}",
                 "app/views/#{namespace.downcase}"
+      puts "Generating Stylesheet..."
+      directory "assets", "app/assets/"
+      puts "Generating Devise Helper..."
+      directory "helpers", "app/helpers"
     end
   end
 end
