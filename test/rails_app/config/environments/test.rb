@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RailsApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -16,7 +17,7 @@ RailsApp::Application.configure do
   # Apache or NGINX already handles this.
   if Rails.version >= "5.0.0"
     config.public_file_server.enabled = true
-    config.public_file_server.headers = {'Cache-Control' => 'public, max-age=3600'}
+    config.public_file_server.headers = {"Cache-Control" => "public, max-age=3600"}
   elsif Rails.version >= "4.2.0"
     config.serve_static_files = true
     config.static_cache_control = "public, max-age=3600"

@@ -15,4 +15,5 @@ test:
           - test/**/*_test.rb
 
   post:
+    - bundle exec codeclimate-test-reporter
     - bundle exec rake rubocop

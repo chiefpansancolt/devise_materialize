@@ -6,6 +6,7 @@ AllCops:
   - Gemfile.lock
   - devise_materialize.gemspec
   - Rakefile
+  - test/rails_app/**/*
   TargetRubyVersion: 2.4
 Lint/AmbiguousOperator:
   Description: Checks for ambiguous operators in the first argument of a method invocation
@@ -156,6 +157,8 @@ Metrics/AbcSize:
   Reference: http://c2.com/cgi/wiki?AbcMetric
   Enabled: true
   Max: 15
+  Exclude:
+    - test/lib/install_generator_test.rb
 Metrics/BlockNesting:
   Description: Avoid excessive block nesting
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#three-is-the-number-thou-shalt-count
@@ -178,6 +181,8 @@ Metrics/MethodLength:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#short-methods
   Enabled: true
   Max: 10
+  Exclude:
+    - test/lib/install_generator_test.rb
 Metrics/ModuleLength:
   Description: Avoid modules longer than 100 lines of code.
   Enabled: true
