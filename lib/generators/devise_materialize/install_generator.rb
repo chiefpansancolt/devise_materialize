@@ -7,12 +7,8 @@ module DeviseMaterialize
 
     desc "Creates a Devise Materialize Styled Views"
     argument :namespace, type: :string, default: "Devise"
-    class_option :form_engine, type: :string, default: "default",
-                               description: "Choose a form engine " \
-                               "(default or simple_form)"
-    class_option :view_engine, type: :string, default: "erb",
-                               description: "Choose a views engine " \
-                               "(erb, haml, or slim)"
+    class_option :form_engine, type: :string, default: "default", aliases: "-f"
+    class_option :view_engine, type: :string, default: "erb", aliases: "-v"
 
     def generate_views
       puts "Generating Views..."
@@ -27,7 +23,11 @@ module DeviseMaterialize
     private
 
     def file_name
-      pluralize(namespace.downcase)
+      if namespace.casecmp("devise").zero?
+        namespace.downcase.underscore
+      else
+        namespace.downcase.underscore.pluralize
+      end
     end
   end
 end

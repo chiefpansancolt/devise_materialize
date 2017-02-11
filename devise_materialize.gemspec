@@ -19,21 +19,12 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
 
-  spec.files = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
-
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.files         = `git ls-files`.split("\n")
+  spec.test_files    = `git ls-files -- test/*`.split("\n")
   spec.require_paths = ["lib"]
 
   spec.required_ruby_version = ">= 2.2.0"
   spec.required_rubygems_version = "> 1.3.1"
 
-  spec.add_dependency "rails", "~>5.0.1"
-
-  spec.add_development_dependency "bundler", "~> 1.13"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "minitest", "~> 5.0"
-  spec.add_development_dependency "pry", "~> 0.10.4"
+  spec.add_dependency("railties", ">= 4.1.0", "< 5.1")
 end

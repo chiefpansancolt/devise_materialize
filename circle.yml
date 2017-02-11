@@ -1,0 +1,18 @@
+machine:
+  timezone: America/New_York
+  ruby:
+    version: 2.4.0
+
+dependencies:
+  pre:
+    - gem install bundler
+
+test:
+  override:
+    - bundle exec rake test TESTOPTS="--ci-dir=$CIRCLE_TEST_REPORTS/reports":
+        parallel: true
+        files:
+          - test/**/*_test.rb
+
+  post:
+    - bundle exec rake rubocop

@@ -17,10 +17,10 @@ gem "material_icons"
 # Required if using HAML
 gem "haml"
 
-# required if using Slim
+# Required if using Slim
 gem "slim"
 
-# required if using Simple Form
+# Required if using Simple Form
 gem "simple_form"
 
 gem "devise_materialize", "~>1.0.0"
@@ -30,11 +30,11 @@ gem "devise_materialize", "~>1.0.0"
 
 [devise](https://github.com/plataformatec/devise), [materialize-sass](https://github.com/mkhairi/materialize-sass) and [material_icons](https://github.com/Angelmmiguel/material_icons) are required in your gemfile to enable the views to generate without error and in the proper style.
 
-| Command Line Flags | Description                            | Defaults | Options                  |
-| ------------------ | -------------------------------------- | -------- | ------------------------ |
-| NAMESPACE          | What is the model name used for devise | Devise   | Devise, Users, Admins, etc |
-| --form-engine      | Define a form Engine to use            | default  | default, simple_form     |
-| --view-engine      | Define a View Engine to use            | erb      | erb, haml, slim          |
+| Command Line Flags      | Description                            | Defaults | Options                  |
+| ----------------------- | -------------------------------------- | -------- | ------------------------ |
+| NAMESPACE               | What is the model name used for devise | Devise   | Devise, Users, Admins, etc |
+| -f / --form-engine      | Define a form Engine to use            | default  | default, simple_form     |
+| -v / --view-engine      | Define a View Engine to use            | erb      | erb, haml, slim          |
 
 ### Basic Usage
 
@@ -63,7 +63,9 @@ To install this gem onto your local machine, run `bundle exec rake build`. To re
 Bug reports and pull requests are welcome on GitHub at https://github.com/techgurupezza/devise_materialize. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 1. Fork Repo and create new branch
-2. Once all is changed and committed create a pull request. Ensure all merge conflicts are fixed and CI is passing.
+2. Once all is changed and committed create a pull request.
+
+**Ensure all merge conflicts are fixed and CI is passing.**
 
 ## License
 
