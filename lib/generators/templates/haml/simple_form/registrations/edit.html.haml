@@ -26,4 +26,4 @@
           .form-actions.center
             = f.button :submit, "Update"
       .card-action.center
-        = render 'devise/shared/links'
+        = render "<%= namespace.downcase %>/shared/links"
