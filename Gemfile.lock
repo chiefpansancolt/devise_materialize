@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    devise_materialize (0.0.4.test6)
+    devise_materialize (0.0.5.alpha)
       railties (>= 4.1.0, < 5.1)
 
 GEM

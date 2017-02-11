@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 module DeviseMaterialize
-  VERSION = "0.0.4.test6"
+  VERSION = "0.0.5.alpha"
 end

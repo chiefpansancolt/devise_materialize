@@ -1,4 +1,12 @@
-# Devise Materialize
+# Devise
+
+[![Gem](https://img.shields.io/gem/v/devise_materialize.svg?style=flat-square)](https://rubygems.org/gems/devise_materialize)
+[![CircleCI](https://img.shields.io/circleci/project/github/techgurupezza/devise_materialize.svg?style=flat-square)](https://circleci.com/gh/techgurupezza/devise_materialize)
+[![Code Climate](https://img.shields.io/codeclimate/github/techgurupezza/devise_materialize.svg?style=flat-square)](https://lima.codeclimate.com/github/techgurupezza/devise_materialize)
+[![Test Coverage](https://img.shields.io/codeclimate/coverage/github/techgurupezza/devise_materialize.svg?style=flat-square)](https://lima.codeclimate.com/github/techgurupezza/devise_materialize/coverage)
+[![Gemnasium](https://img.shields.io/gemnasium/techgurupezza/devise_materialize.svg?style=flat-square)](https://gemnasium.com/github.com/techgurupezza/devise_materialize)
+[![Gem](https://img.shields.io/gem/dt/devise_materialize.svg?style=flat-square)](https://rubygems.org/gems/devise_materialize)
+
 
 Devise Materialize gem is here to generate you devise view in a materialize styled format with or w/o simple_form.
 This gem is not intended to live forever in your gemfile. It must be in your gemfile to load the resources needed from the generator.
