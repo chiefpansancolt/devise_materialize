@@ -62,7 +62,7 @@ This will generate the views in simple form usage and HAML syntax
 
 ## Change Log
 
-Check out the [Change Log](https://github.com/techgurupezza/devise_materialize/CHANGELOG.md) for new features/bug fixes per release of a new version.
+Check out the [Change Log](https://github.com/techgurupezza/devise_materialize/blob/master/CHANGELOG.md) for new features/bug fixes per release of a new version.
 
 ## Development
 
