@@ -1,4 +1,4 @@
-# Devise
+# Devise Materialize
 
 [![Gem](https://img.shields.io/gem/v/devise_materialize.svg?style=flat-square)](https://rubygems.org/gems/devise_materialize)
 [![CircleCI](https://img.shields.io/circleci/project/github/techgurupezza/devise_materialize.svg?style=flat-square)](https://circleci.com/gh/techgurupezza/devise_materialize)
