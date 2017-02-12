@@ -12,11 +12,11 @@
               = alert
           .form-inputs.row
             .input-field.col.s12
-              %i.materil-icons.prefix email
+              %i.material-icons.prefix email
               = f.email_field :email, required: true, autofocus: true
               = f.label :email
             .input-field.col.s12
-              %i.materil-icons.prefix lock
+              %i.material-icons.prefix lock
               = f.password_field :password, required: true, autocomplete: "off"
               = f.label :password
             - if devise_mapping.rememberable?

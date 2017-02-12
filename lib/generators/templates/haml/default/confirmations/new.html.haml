@@ -12,7 +12,7 @@
               = alert
           .form-inputs.row
             .input-field.col.s12
-              %i.material-icons email
+              %i.material-icons.prefix email
               = f.email_field :email, autofocus: true, required: true, class: "validate"
                 value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email)
               = f.label :email

@@ -21,7 +21,7 @@
                 = @minimum_password_length
                 Characters Minimum
             .input-field.col.s12
-              %i.material-icons lock
+              %i.material-icons.prefix lock
               = f.password_field :password_confirmation, autofocus: true, required: true,
                 autocomplete: false
               = f.label :password_confirmation
