@@ -1,0 +1,35 @@
+.row.login-form
+  .col.s12
+    .card.hoverable
+      .card-content
+        span.card-title.center Sign Up
+        .divider
+        = form_for resource, as: resource_name,
+        | url: registration_path(resource_name) do |f|
+        - if devise_error_messages? || alert
+          .form-errors.red.lighten-1
+            = devise_error_messages!
+            = alert
+        .form-inputs.row
+          .input-field.col.s12
+            i.material-icons.prefix email
+            = f.email_field :email, autofocus: true, required: true
+            = f.label :email
+          .input-field.col.s12
+            i.material-icons.prefix lock
+            = f.password_field :password, autocomplete: "off", required: true
+            = f.label :password
+            span.hint-text
+              = @minimum_password_length
+              | Characters Minimum
+          .input-field.col.s12
+            i.material-icons.prefix lock
+            = f.password_field :password_confirmation, autocomplete: "off",
+            | required: true
+            | \#{f.label :password_confirmation}
+        .form-actions.center
+          = f.button :submit, "Sign Up", class: "btn waves-effect"
+      .card-action
+        .devise-links
+          = render "<%= namespace.downcase %>/shared/links"
+ 
