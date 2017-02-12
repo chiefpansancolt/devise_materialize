@@ -159,6 +159,7 @@ Metrics/AbcSize:
   Max: 15
   Exclude:
     - test/lib/install_generator_test.rb
+    - lib/generators/devise_materialize/install_generator.rb
 Metrics/BlockNesting:
   Description: Avoid excessive block nesting
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#three-is-the-number-thou-shalt-count

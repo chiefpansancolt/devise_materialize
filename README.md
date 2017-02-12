@@ -60,6 +60,10 @@ $ rails g devise_materialize:install Users --form-engine simple_form --view-engi
 ```
 This will generate the views in simple form usage and HAML syntax
 
+## Change Log
+
+Check out the [Change Log](https://github.com/techgurupezza/devise_materialize/CHANGELOG.md) for new features/bug fixes per release of a new version.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
