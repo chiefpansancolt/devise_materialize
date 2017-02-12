@@ -1,0 +1,30 @@
+.row.login-form
+  .col.s12
+    .card.hoverable
+      .card-content
+        %span.card-title.center Log In
+        .divider
+        = form_for resource, as: resource_name,
+          url: session_path(resource_name) do |f|
+          - if devise_error_messages? || alert
+            .form-errors.red.lighten-1
+              = devise_error_messages!
+              = alert
+          .form-inputs.row
+            .input-field.col.s12
+              %i.materil-icons.prefix email
+              = f.email_field :email, required: true, autofocus: true
+              = f.label :email
+            .input-field.col.s12
+              %i.materil-icons.prefix lock
+              = f.password_field :password, required: true, autocomplete: "off"
+              = f.label :password
+            - if devise_mapping.rememberable?
+              %p
+                = f.check_box :remember_me
+                = f.label :remember_me
+          .form-actions.center
+            = f.button :submit, "Log In", class: "btn waves-effect"
+      .card-action
+        .devise-links
+          = render "<%= namespace.downcase %>/shared/links"
