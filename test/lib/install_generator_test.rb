@@ -71,6 +71,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     view_engine = options[:view_engine] || "html.erb"
 
     assert_file "app/assets/stylesheets/devise.scss"
+    assert_file "app/assets/javascripts/init_form_materialize.coffee"
     assert_file "app/helpers/devise_helper.rb"
     assert_file "app/views/#{scope}/confirmations/new.#{view_engine}"
     assert_file(

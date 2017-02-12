@@ -14,7 +14,7 @@ module DeviseMaterialize
       puts "Generating Views..."
       directory "#{options.view_engine.downcase}/#{options.form_engine}",
                 "app/views/#{file_name}"
-      puts "Generating Stylesheet..."
+      puts "Generating Javascript & Stylesheet..."
       directory "assets", "app/assets/"
       puts "Generating Devise Helper..."
       directory "helpers", "app/helpers"
