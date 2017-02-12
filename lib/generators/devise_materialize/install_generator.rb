@@ -20,14 +20,15 @@ module DeviseMaterialize
       directory "helpers", "app/helpers"
     end
 
-    private
+    protected
 
     def file_name
-      if namespace.casecmp("devise").zero?
-        namespace.downcase.underscore
-      else
-        namespace.downcase.underscore.pluralize
-      end
+      @file_name ||=
+        if namespace.casecmp("devise").zero?
+          namespace.downcase.underscore
+        else
+          namespace.downcase.underscore.pluralize
+        end
     end
   end
 end
