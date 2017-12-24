@@ -2,9 +2,9 @@
 
 [![Gem](https://img.shields.io/gem/v/devise_materialize.svg?style=flat-square)](https://rubygems.org/gems/devise_materialize)
 [![CircleCI](https://img.shields.io/circleci/project/github/techgurupezza/devise_materialize.svg?style=flat-square)](https://circleci.com/gh/techgurupezza/devise_materialize)
-[![Code Climate](https://img.shields.io/codeclimate/github/techgurupezza/devise_materialize.svg?style=flat-square)](https://lima.codeclimate.com/github/techgurupezza/devise_materialize)
-[![Test Coverage](https://img.shields.io/codeclimate/coverage/github/techgurupezza/devise_materialize.svg?style=flat-square)](https://lima.codeclimate.com/github/techgurupezza/devise_materialize/coverage)
-[![Gemnasium](https://img.shields.io/gemnasium/techgurupezza/devise_materialize.svg?style=flat-square)](https://gemnasium.com/github.com/techgurupezza/devise_materialize)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/Nickersoft/dql.svg?style=flat-square)](https://codeclimate.com/github/techgurupezza/devise_materialize/maintainability)
+[![Code Climate](https://img.shields.io/codeclimate/c/Nickersoft/dql.svg?style=flat-square)](https://codeclimate.com/github/techgurupezza/devise_materialize/test_coverage)
+[![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg?style=flat-square)](https://gemnasium.com/github.com/techgurupezza/devise_materialize)
 [![Gem](https://img.shields.io/gem/dt/devise_materialize.svg?style=flat-square)](https://rubygems.org/gems/devise_materialize)
 
 
