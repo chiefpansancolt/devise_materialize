@@ -4,8 +4,7 @@
       <div class="card-content">
         <span class="card-title center">Log In</span>
         <div class="divider"></div>
-        <%= form_for resource, as: resource_name, %>
-          url: session_path(resource_name) do |f|
+        <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
           <% if devise_error_messages? || alert %>
             <div class="form-errors red lighten-1">
               <%= devise_error_messages! %>
@@ -31,7 +30,7 @@
             <% end %>
           </div>
           <div class="form-actions center">
-            <%= f.button :submit, "Log In", class: "btn waves-effect" %>
+            <%= f.submit "Log In", class: "btn waves-effect" %>
           </div>
         <% end %>
       </div>
