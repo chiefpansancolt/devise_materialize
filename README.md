@@ -31,7 +31,7 @@ gem "slim"
 # Required if using Simple Form
 gem "simple_form"
 
-gem "devise_materialize", "~>1.0.0"
+gem "devise_materialize", "~>1.1.0"
 ```
 
 ## Usage

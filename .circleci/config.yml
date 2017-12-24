@@ -1,0 +1,54 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/ruby:2.4.1
+        environment:
+          RAILS_ENV: test
+
+    working_directory: ~/devise_materialize
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Install Gems
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+      # run tests!
+      - run:
+          name: Run Tests
+          command: |
+            bundle exec rake test
+
+      - run:
+          name: Install Gems for Global Usage
+          command: |
+            gem install rubocop
+
+      - run:
+          name: Run Linters
+          command: |
+            bundle exec rake rubocop
+            bundle exec codeclimate-test-reporter
+
+      # collect reports
+      - store_artifacts:
+          path: coverage
+          destination: coverage

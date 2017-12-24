@@ -1,5 +1,5 @@
-# coding: utf-8
 # frozen_string_literal: true
+
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "devise_materialize/version"
@@ -18,13 +18,12 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/techgurupezza/devise_materialize"
   spec.license       = "MIT"
 
-
   spec.files         = `git ls-files`.split("\n")
   spec.test_files    = `git ls-files -- test/*`.split("\n")
   spec.require_paths = ["lib"]
 
-  spec.required_ruby_version = ">= 2.2.0"
+  spec.required_ruby_version = ">= 2.4.0"
   spec.required_rubygems_version = "> 1.3.1"
 
-  spec.add_dependency("railties", ">= 4.1.0", "< 5.1")
+  spec.add_dependency("railties", ">= 4.1.0", "< 5.2")
 end
