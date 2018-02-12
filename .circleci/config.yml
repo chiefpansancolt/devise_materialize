@@ -31,11 +31,10 @@ jobs:
             - vendor/bundle
 
       # run tests!
-            # run tests!
-            - run:
-                name: Run Tests
-                command: bundle exec rake test
-                when: always
+      - run:
+          name: Run Tests
+          command: bundle exec rake test
+          when: always
 
       # collect reports
       - store_artifacts:
@@ -75,11 +74,10 @@ jobs:
             - vendor/bundle
 
       # run tests!
-            # run tests!
-            - run:
-                name: Run Tests
-                command: bundle exec rake test
-                when: always
+      - run:
+          name: Run Tests
+          command: bundle exec rake test
+          when: always
 
       # collect reports
       - store_artifacts:
@@ -119,11 +117,10 @@ jobs:
             - vendor/bundle
 
       # run tests!
-            # run tests!
-            - run:
-                name: Run Tests
-                command: bundle exec rake test
-                when: always
+      - run:
+          name: Run Tests
+          command: bundle exec rake test
+          when: always
 
       # collect reports
       - store_artifacts:
