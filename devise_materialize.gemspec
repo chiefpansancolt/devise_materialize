@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = `git ls-files -- test/*`.split("\n")
   spec.require_paths = ["lib"]
 
-  spec.required_ruby_version = ">= 2.3.0"
+  spec.required_ruby_version = ">= 2.2"
   spec.required_rubygems_version = "> 1.3.1"
 
   spec.add_dependency("railties", ">= 4.1.0", "< 5.2")
