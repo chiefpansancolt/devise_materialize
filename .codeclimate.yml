@@ -40,8 +40,6 @@ checks:
 plugins:
  rubocop:
   enabled: true
- brakeman:
-  enabled: true
 exclude_patterns:
   - test/rails_app
   - lib/generators/templates
