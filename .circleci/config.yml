@@ -227,7 +227,7 @@ jobs:
 
 workflows:
   version: 2
-  ruby_versions_and_test:
+  ruby-versions-and-test:
     jobs:
       - ruby_2_5_0
       - ruby_2_4_3
