@@ -1,10 +1,10 @@
 # Devise Materialize
 
-[![Gem](https://img.shields.io/gem/v/devise_materialize.svg?style=flat-square)](https://rubygems.org/gems/devise_materialize)
-[![CircleCI](https://img.shields.io/circleci/project/github/techgurupezza/devise_materialize.svg?style=flat-square)](https://circleci.com/gh/techgurupezza/devise_materialize)
+[![CircleCI](https://circleci.com/gh/techgurupezza/devise_materialize.svg?style=svg)](https://circleci.com/gh/techgurupezza/devise_materialize)
 [![Maintainability](https://api.codeclimate.com/v1/badges/aa4da7ff94af7db3bc66/maintainability)](https://codeclimate.com/github/techgurupezza/devise_materialize/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/aa4da7ff94af7db3bc66/test_coverage)](https://codeclimate.com/github/techgurupezza/devise_materialize/test_coverage)
 [![Gem](https://img.shields.io/gem/dt/devise_materialize.svg?style=flat-square)](https://rubygems.org/gems/devise_materialize)
+[![Gem](https://img.shields.io/gem/v/devise_materialize.svg?style=flat-square)](https://rubygems.org/gems/devise_materialize)
 
 
 Devise Materialize gem is here to generate you devise view in a materialize styled format with or w/o simple_form.
@@ -30,7 +30,7 @@ gem "slim"
 # Required if using Simple Form
 gem "simple_form"
 
-gem "devise_materialize", "~>1.1.0"
+gem "devise_materialize", "~>1.1.1"
 ```
 
 ## Usage

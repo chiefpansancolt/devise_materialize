@@ -1,5 +1,14 @@
 # Change Log
 
+## v1.1.1
+
+#### Features
+- Enable Circleci testing for 2.2, 2.3, 2.4, and 2.5
+
+#### Bugs
+- N/A
+
+
 ## v1.1.0
 
 #### Features
