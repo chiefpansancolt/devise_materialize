@@ -1,1 +1,2 @@
 --exclude /templates/
+--exclude /test/rails_app/

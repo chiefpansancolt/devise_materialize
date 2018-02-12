@@ -3,10 +3,10 @@
 ## v1.1.0
 
 #### Features
-- Touch up Repo with various items (Issue #2)
+- Touch up Repo with various items (#2)
 
 #### Bugs
-- Fix ERB markup (Issue #1)
+- Fix ERB markup (#1)
 
 ## v1.0.0
 

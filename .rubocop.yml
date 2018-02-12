@@ -8,7 +8,7 @@ AllCops:
     - test/rails_app/**/*
     - test/tmp/**/*
     - lib/generators/templates/**/*
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.3
 
 # Department Bundler
 Bundler/DuplicatedGem:
