@@ -130,49 +130,6 @@ jobs:
       - store_test_results:
           path: test/reports
 
-  ruby_2_2_9:
-    docker:
-      - image: circleci/ruby:2.2.9
-        environment:
-          BUNDLE_JOBS: 3
-          BUNDLE_RETRY: 3
-          BUNDLE_PATH: vendor/bundle
-          RAILS_ENV: test
-
-    working_directory: ~/devise_materialize
-
-    steps:
-      - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - rails-bundle-v1-{{ checksum "Gemfile" }}
-            - rails-bundle-v1-
-
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-
-      - save_cache:
-          key: rails-bundle-v1-{{ checksum "Gemfile" }}
-          paths:
-            - vendor/bundle
-
-      # run tests!
-      - run:
-          name: Run Tests
-          command: bundle exec rake test
-          when: always
-
-      # collect reports
-      - store_artifacts:
-          path: coverage
-          destination: coverage
-
-      - store_test_results:
-          path: test/reports
-
   test:
     docker:
       - image: circleci/ruby:2.5.0
