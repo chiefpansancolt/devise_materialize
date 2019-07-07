@@ -66,17 +66,19 @@ Check out the [Change Log](https://github.com/chiefpansancolt/devise_materialize
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake build`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake build`. Gems will be built/release by Owner.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/chiefpansancolt/devise_materialize. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug Reports, Feature Requests, and Pull Requests are welcome on GitHub at https://github.com/chiefpansancolt/devise_materialize. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/chiefpansancolt/devise_materialize/blob/master/CODE_OF_CONDUCT.md) code of conduct.
 
-1. Fork Repo and create new branch
-2. Once all is changed and committed create a pull request.
+To see more about Contributing check out this [document](https://github.com/chiefpansancolt/devise_materialize/blob/master/CONTRIBUTING.md).
+
+- Fork Repo and create new branch
+- Once all is changed and committed create a pull request.
 
 **Ensure all merge conflicts are fixed and CI is passing.**
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Devise Materialize is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
