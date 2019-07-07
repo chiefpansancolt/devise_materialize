@@ -4,14 +4,14 @@ require "rails/generators"
 
 module DeviseMaterialize
   class InstallGenerator < Rails::Generators::Base
-    source_root File.expand_path("../../templates", __FILE__)
+    source_root File.expand_path("../templates", __dir__)
 
     desc "Creates a Devise Materialize Styled Views"
     argument :namespace, type: :string, default: "Devise"
     class_option :form_engine, type: :string, default: "default", aliases: "-f"
     class_option :view_engine, type: :string, default: "erb", aliases: "-v"
 
-    def generate_views
+    def generate_views # rubocop:disable AbcSize
       puts "Generating Views..."
       directory "#{options.view_engine.downcase}/#{options.form_engine}/mailer",
                 "app/views/#{scope}/mailer"

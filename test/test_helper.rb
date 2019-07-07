@@ -13,7 +13,7 @@ SimpleCov.minimum_coverage_by_file 90
 SimpleCov.minimum_coverage 90
 
 ENV["RAILS_ENV"] = "test"
-$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 
 require "devise_materialize"
 require "rails_app/config/environment"

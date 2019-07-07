@@ -4,7 +4,7 @@ require "test_helper"
 
 class InstallGeneratorTest < Rails::Generators::TestCase
   tests DeviseMaterialize::InstallGenerator
-  destination File.expand_path("../../tmp", __FILE__)
+  destination File.expand_path("../tmp", __dir__)
   setup :prepare_destination
 
   test "assert files created for default namespace and no params" do
@@ -13,60 +13,61 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   end
 
   test "assert files created for default namespace with haml" do
-    run_generator %w[-v haml]
+    run_generator %w(-v haml)
     assert_files nil, view_engine: "html.haml"
   end
 
   test "assert files created for default namespace wil slim" do
-    run_generator %w[-v slim]
+    run_generator %w(-v slim)
     assert_files nil, view_engine: "html.slim"
   end
 
   test "assert files created for users namespace with no params" do
-    run_generator %w[User]
+    run_generator %w(User)
     assert_files "users"
   end
 
   test "assert files created for users namespace with haml" do
-    run_generator %w[User -v haml]
+    run_generator %w(User -v haml)
     assert_files "users", view_engine: "html.haml"
   end
 
   test "assert files created for users namespace wil slim" do
-    run_generator %w[User -v slim]
+    run_generator %w(User -v slim)
     assert_files "users", view_engine: "html.slim"
   end
 
   test "assert files created for default namespace and simple form" do
-    run_generator %w[-f simple_form]
+    run_generator %w(-f simple_form)
     assert_files
   end
 
   test "assert files created for default namespace with haml and simple_form" do
-    run_generator %w[-v haml -f simple_form]
+    run_generator %w(-v haml -f simple_form)
     assert_files nil, view_engine: "html.haml"
   end
 
   test "assert files created for default namespace wil slim and simple form" do
-    run_generator %w[-v slim -f simple_form]
+    run_generator %w(-v slim -f simple_form)
     assert_files nil, view_engine: "html.slim"
   end
 
   test "assert files created for users namespace with and simple form" do
-    run_generator %w[User -f simple_form]
+    run_generator %w(User -f simple_form)
     assert_files "users"
   end
 
   test "assert files created for users namespace with haml and simple form" do
-    run_generator %w[User -v haml -f simple_form]
+    run_generator %w(User -v haml -f simple_form)
     assert_files "users", view_engine: "html.haml"
   end
 
   test "assert files created for users namespace wil slim and simple form" do
-    run_generator %w[User -v slim -f simple_form]
+    run_generator %w(User -v slim -f simple_form)
     assert_files "users", view_engine: "html.slim"
   end
 
+  # rubocop:disable MethodLength, AbcSize
   def assert_files(scope = nil, options = {})
     scope = "devise" if scope.nil?
     view_engine = options[:view_engine] || "html.erb"
@@ -91,4 +92,5 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     assert_file "app/views/#{scope}/shared/_links.#{view_engine}"
     assert_file "app/views/#{scope}/unlocks/new.#{view_engine}"
   end
+  # rubocop:enable MethodLength, AbcSize
 end

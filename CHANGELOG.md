@@ -1,5 +1,15 @@
 # Change Log
 
+## v1.2.1
+
+#### Features
+
+- Update CI testing from 2.2-2.6 Ruby versions
+
+#### Bugs
+
+- Update Rails support upto 7 (#4) - Thanks @cgibsonmm for the assist!
+
 ## v1.1.1
 
 #### Features
