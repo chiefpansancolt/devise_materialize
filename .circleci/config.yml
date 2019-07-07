@@ -151,7 +151,7 @@ jobs:
       - store_test_results:
           path: test/reports
 
-  test:
+  run-test:
     environment:
       CC_TEST_REPORTER_ID: 8554fdd454c086e46c9b99c39f068eeeed41522aeeab032ca155f2d0f827f16a
     working_directory: ~/devise_materialize
@@ -202,7 +202,7 @@ workflows:
       - ruby_2_4
       - ruby_2_3
       - ruby_2_2
-      - test:
+      - run-test:
           requires:
             - ruby_2_6
             - ruby_2_5
