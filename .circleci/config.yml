@@ -37,15 +37,6 @@ ruby_versions:
           BUNDLE_RETRY: 3
           RAILS_ENV: test
 
-  - &ruby-2-2
-    working_directory: ~/devise_materialize
-    docker:
-      - image: circleci/ruby:2.2.10
-        environment:
-          BUNDLE_JOBS: 3
-          BUNDLE_RETRY: 3
-          RAILS_ENV: test
-
 build_steps:
   - &bundle_install
     run:
@@ -121,15 +112,6 @@ jobs:
       - *store_coverage
       - *store_test_results
 
-  test_ruby_2_2:
-    <<: *ruby-2-2
-    steps:
-      - checkout
-      - *bundle_install
-      - *run_test
-      - *store_coverage
-      - *store_test_results
-
   test:
     <<: *ruby-2-6
     steps:
@@ -148,11 +130,9 @@ workflows:
       - test_ruby_2_5
       - test_ruby_2_4
       - test_ruby_2_3
-      - test_ruby_2_2
       - test:
           requires:
             - test_ruby_2_6
             - test_ruby_2_5
             - test_ruby_2_4
             - test_ruby_2_3
-            - test_ruby_2_2
