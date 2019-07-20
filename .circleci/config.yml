@@ -1,7 +1,7 @@
 version: 2
 
-jobs:
-  ruby_2_6:
+ruby_versions:
+  - &ruby-2-6
     working_directory: ~/devise_materialize
     docker:
       - image: circleci/ruby:2.6.3
@@ -10,28 +10,7 @@ jobs:
           BUNDLE_RETRY: 3
           RAILS_ENV: test
 
-    steps:
-      - checkout
-
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-
-      # Run Test Classes
-      - run:
-          name: Run Test
-          command: bundle exec rake test
-          when: always
-
-      # Collect Reports
-      - store_artifacts:
-          path: coverage
-          destination: coverage
-
-      - store_test_results:
-          path: test/reports
-
-  ruby_2_5:
+  - &ruby-2-5
     working_directory: ~/devise_materialize
     docker:
       - image: circleci/ruby:2.5.5
@@ -40,28 +19,7 @@ jobs:
           BUNDLE_RETRY: 3
           RAILS_ENV: test
 
-    steps:
-      - checkout
-
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-
-      # Run Test Classes
-      - run:
-          name: Run Test
-          command: bundle exec rake test
-          when: always
-
-      # Collect Reports
-      - store_artifacts:
-          path: coverage
-          destination: coverage
-
-      - store_test_results:
-          path: test/reports
-
-  ruby_2_4:
+  - &ruby-2-4
     working_directory: ~/devise_materialize
     docker:
       - image: circleci/ruby:2.4.6
@@ -70,28 +28,7 @@ jobs:
           BUNDLE_RETRY: 3
           RAILS_ENV: test
 
-    steps:
-      - checkout
-
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-
-      # Run Test Classes
-      - run:
-          name: Run Test
-          command: bundle exec rake test
-          when: always
-
-      # Collect Reports
-      - store_artifacts:
-          path: coverage
-          destination: coverage
-
-      - store_test_results:
-          path: test/reports
-
-  ruby_2_3:
+  - &ruby-2-3
     working_directory: ~/devise_materialize
     docker:
       - image: circleci/ruby:2.3.7
@@ -100,28 +37,7 @@ jobs:
           BUNDLE_RETRY: 3
           RAILS_ENV: test
 
-    steps:
-      - checkout
-
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-
-      # Run Test Classes
-      - run:
-          name: Run Test
-          command: bundle exec rake test
-          when: always
-
-      # Collect Reports
-      - store_artifacts:
-          path: coverage
-          destination: coverage
-
-      - store_test_results:
-          path: test/reports
-
-  ruby_2_2:
+  - &ruby-2-2
     working_directory: ~/devise_materialize
     docker:
       - image: circleci/ruby:2.2.10
@@ -130,82 +46,113 @@ jobs:
           BUNDLE_RETRY: 3
           RAILS_ENV: test
 
+build_steps:
+  - &bundle_install
+    run:
+      name: Bundle Install
+      command: bundle check || bundle install
+
+  - &setup_code_climate
+    run:
+      name: Setup Code Climate test-reporter
+      command: |
+        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        chmod +x ./cc-test-reporter
+
+  - &run_test_cc
+    run:
+      name: Run Tests
+      command: |
+        ./cc-test-reporter before-build
+        bundle exec rake test
+        ./cc-test-reporter after-build
+      when: always
+
+  - &run_test
+    run:
+      name: Run Tests
+      command: bundle exec rake test
+      when: always
+
+  - &store_coverage
+    # collect reports
+    store_artifacts:
+      path: coverage
+      destination: coverage
+
+  - &store_test_results
+    store_test_results:
+      path: test/reports
+
+jobs:
+  test_ruby_2_6:
+    <<: *ruby-2-6
     steps:
       - checkout
+      - *bundle_install
+      - *run_test
+      - *store_coverage
+      - *store_test_results
 
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-
-      # Run Test Classes
-      - run:
-          name: Run Test
-          command: bundle exec rake test
-          when: always
-
-      # Collect Reports
-      - store_artifacts:
-          path: coverage
-          destination: coverage
-
-      - store_test_results:
-          path: test/reports
-
-  run-test:
-    environment:
-      CC_TEST_REPORTER_ID: 8554fdd454c086e46c9b99c39f068eeeed41522aeeab032ca155f2d0f827f16a
-    working_directory: ~/devise_materialize
-    docker:
-      - image: circleci/ruby:2.6.3
-        environment:
-          BUNDLE_JOBS: 3
-          BUNDLE_RETRY: 3
-          BUNDLE_PATH: vendor/bundle
-          RAILS_ENV: test
-
+  test_ruby_2_5:
+    <<: *ruby-2-5
     steps:
       - checkout
+      - *bundle_install
+      - *run_test
+      - *store_coverage
+      - *store_test_results
 
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
+  test_ruby_2_4:
+    <<: *ruby-2-4
+    steps:
+      - checkout
+      - *bundle_install
+      - *run_test
+      - *store_coverage
+      - *store_test_results
 
-      # Run Test Classes
-      - run:
-          name: Setup Code Climate test-reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
+  test_ruby_2_3:
+    <<: *ruby-2-3
+    steps:
+      - checkout
+      - *bundle_install
+      - *run_test
+      - *store_coverage
+      - *store_test_results
 
-      - run:
-          name: Run Test
-          command: |
-            ./cc-test-reporter before-build
-            bundle exec rake test
-            ./cc-test-reporter after-build
-          when: always
+  test_ruby_2_2:
+    <<: *ruby-2-2
+    steps:
+      - checkout
+      - *bundle_install
+      - *run_test
+      - *store_coverage
+      - *store_test_results
 
-      # collect reports
-      - store_artifacts:
-          path: coverage
-          destination: coverage
-
-      - store_test_results:
-          path: test/reports
+  test:
+    <<: *ruby-2-6
+    steps:
+      - checkout
+      - *bundle_install
+      - *setup_code_climate
+      - *run_test_cc
+      - *store_coverage
+      - *store_test_results
 
 workflows:
   version: 2
-  ruby-versions-and-test:
+  build-and-test:
     jobs:
-      - ruby_2_6
-      - ruby_2_5
-      - ruby_2_4
-      - ruby_2_3
-      - ruby_2_2
-      - run-test:
+      - test_ruby_2_6
+      - test_ruby_2_5
+      - test_ruby_2_4
+      - test_ruby_2_3
+      - test_ruby_2_2
+      - test:
           requires:
-            - ruby_2_6
-            - ruby_2_5
-            - ruby_2_4
-            - ruby_2_3
-            - ruby_2_2
+            - test_ruby_2_6
+            - test_ruby_2_5
+            - test_ruby_2_4
+            - test_ruby_2_3
+            - test_ruby_2_2
