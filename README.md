@@ -3,8 +3,7 @@
 [![CircleCI](https://circleci.com/gh/chiefpansancolt/devise_materialize.svg?style=svg)](https://circleci.com/gh/chiefpansancolt/devise_materialize)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f1974d8e4f575d82d523/maintainability)](https://codeclimate.com/github/chiefpansancolt/devise_materialize/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f1974d8e4f575d82d523/test_coverage)](https://codeclimate.com/github/chiefpansancolt/devise_materialize/test_coverage)
-[![Gem](https://img.shields.io/gem/dt/devise_materialize.svg?style=flat-square)](https://rubygems.org/gems/devise_materialize)
-[![Gem](https://img.shields.io/gem/v/devise_materialize.svg?style=flat-square)](https://rubygems.org/gems/devise_materialize)
+[![Gem Version](https://badge.fury.io/rb/devise_materialize.svg)](https://badge.fury.io/rb/devise_materialize)
 
 Devise Materialize gem is here to generate you devise view in a materialize styled format with or w/o simple_form.
 This gem is not intended to live forever in your gemfile. It must be in your gemfile to load the resources needed from the generator.
@@ -29,7 +28,7 @@ gem "slim"
 # Required if using Simple Form
 gem "simple_form"
 
-gem "devise_materialize", "~>1.2.1"
+gem "devise_materialize", "~>1.2.0"
 ```
 
 ## Usage
@@ -45,8 +44,9 @@ gem "devise_materialize", "~>1.2.1"
 ### Basic Usage
 
 ```bash
-$ rails g devise_materialize:install
+> rails g devise_materialize:install
 ```
+
 This will generate the basic views of devise based on defaults
 
 ### Parameters Defined
@@ -54,8 +54,9 @@ This will generate the basic views of devise based on defaults
 If you plan to use simple form using this gem [simple_form_materialize](https://github.com/chiefpansancolt/simple_form_materialize) to install a config file with all wrappers defined as used in this gem.
 
 ```bash
-$ rails g devise_materialize:install Users --form-engine simple_form --view-engine haml
+> rails g devise_materialize:install Users --form-engine simple_form --view-engine haml
 ```
+
 This will generate the views in simple form usage and HAML syntax
 
 ## Change Log
@@ -70,7 +71,7 @@ To install this gem onto your local machine, run `bundle exec rake build`. Gems 
 
 ## Contributing
 
-Bug Reports, Feature Requests, and Pull Requests are welcome on GitHub at https://github.com/chiefpansancolt/devise_materialize. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/chiefpansancolt/devise_materialize/blob/master/CODE_OF_CONDUCT.md) code of conduct.
+Bug Reports, Feature Requests, and Pull Requests are welcome on GitHub at [https://github.com/chiefpansancolt/devise_materialize](https://github.com/chiefpansancolt/devise_materialize). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/chiefpansancolt/devise_materialize/blob/master/CODE_OF_CONDUCT.md) code of conduct.
 
 To see more about Contributing check out this [document](https://github.com/chiefpansancolt/devise_materialize/blob/master/CONTRIBUTING.md).
 

@@ -6,13 +6,15 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gemspec
 
+gem "mdl"
 gem "rails"
 gem "rubocop"
 gem "rubocop-performance"
-gem "simplecov"
 gem "yard"
 
 group :test do
-  gem "codeclimate-test-reporter", require: false
+  gem "minitest"
   gem "minitest-ci"
+  gem "simplecov"
+  gem "simplecov-material"
 end

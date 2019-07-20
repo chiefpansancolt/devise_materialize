@@ -12,10 +12,10 @@ Gem::Specification.new do |spec|
   spec.email         = ["chiefpansancolt@gmail.com"]
 
   spec.summary       = "Generator for Materialize styled Devise Views"
-  spec.description   = "This Gem provides a generator for Materialize styled " \
-                       "Devise Views in HAML, SLIM, and ERB format with " \
-                       "standard Form or simple form functionality"
-  spec.homepage      = "https://github.com/techgurupezza/devise_materialize"
+  spec.description   = %q(This Gem provides a generator for Materialize styled
+                          Devise Views in HAML, SLIM, and ERB format with
+                          standard Form or simple form functionality)
+  spec.homepage      = "https://chiefpansancolt.github.io/devise_materialize/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split("\n")
@@ -25,5 +25,5 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 2.2"
   spec.required_rubygems_version = "> 1.3.1"
 
-  spec.add_dependency("railties", ">= 4.1.0", "< 7.0.0")
+  spec.add_dependency "railties", ">= 4.1.0", "< 7.0.0"
 end
