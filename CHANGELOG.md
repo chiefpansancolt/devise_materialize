@@ -4,7 +4,8 @@
 
 ### Features
 
-- Update CI testing from 2.2-2.6 Ruby versions
+- Update CI testing from 2.3-2.6 Ruby versions
+- Update repo items
 
 ### Bugs
 
