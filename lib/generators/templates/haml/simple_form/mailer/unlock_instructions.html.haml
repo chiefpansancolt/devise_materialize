@@ -30,5 +30,6 @@
                 Your account has been locked due to an excessive number of
                 unsuccessful sign in attempts.
               %p Click the link below to unlock your account:
-              = link_to 'Unlock my Account', class: 'btn waves-effect cyan',
-                unlock_url(@resource, unlock_token: @token)
+              = link_to 'Unlock my Account',
+                unlock_url(@resource, unlock_token: @token),
+                class: 'btn waves-effect cyan'

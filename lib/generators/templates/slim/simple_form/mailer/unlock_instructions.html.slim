@@ -3,15 +3,15 @@ html
   head
     meta content=("text/html; charset=utf-8") http-equiv="Content-Type" /
     link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet" /
-    script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" 
-    script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js" 
-    style type="text/scss" 
+    script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+    script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"
+    style type="text/scss"
       cdata:
         | \.form {
         | max-width: 650px;
         | margin: auto;
         | }
-        
+
         | \.btn {
         | margin-bottom: 20px;
         | margin-top: 20px;
@@ -30,6 +30,6 @@ html
                | unsuccessful sign in attempts.
               p
                | Click the link below to unlock your account:
-               | \#{link_to 'Unlock my Account', class: 'btn waves-effect cyan',
-              unlock_url(@resource, unlock_token: @token)}
-              
+              = link_to 'Unlock my Account', \
+                unlock_url(@resource, unlock_token: @token), \
+                class: 'btn waves-effect cyan' \
