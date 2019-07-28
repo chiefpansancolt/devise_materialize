@@ -4,7 +4,7 @@
 
 ### Bug Fixes
 
-- Fix views for class attribute typo and class ording on link_to element
+- Fix views for class attribute typo and class ording on link_to element (#7)
 
 ## [1.2.0](https://github.com/chiefpansancolt/devise_materialize/releases/tag/1.2.0)
 
