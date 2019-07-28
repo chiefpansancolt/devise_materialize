@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.2.1](https://github.com/chiefpansancolt/devise_materialize/releases/tag/1.2.1)
+
+### Bugs
+
+- Fix views for class attribute typo and class ording on link_to element
+
 ## [1.2.0](https://github.com/chiefpansancolt/devise_materialize/releases/tag/1.2.0)
 
 ### Features
