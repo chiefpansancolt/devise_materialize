@@ -2,48 +2,48 @@
 
 ## [1.2.1](https://github.com/chiefpansancolt/devise_materialize/releases/tag/1.2.1)
 
-### Bugs
+### Bug Fixes
 
 - Fix views for class attribute typo and class ording on link_to element
 
 ## [1.2.0](https://github.com/chiefpansancolt/devise_materialize/releases/tag/1.2.0)
 
-### Features
+### Repository Updates
 
 - Update CI testing from 2.3-2.6 Ruby versions
 - Update repo items
 
-### Bugs
+### Bug Fixes
 
 - Update Rails support upto 7 (#4) - Thanks @cgibsonmm for the assist!
 
 ## [v1.1.1](https://github.com/chiefpansancolt/devise_materialize/releases/tag/v1.1.1)
 
-### Features
+### Repository Updates
 
 - Enable Circleci testing for 2.2, 2.3, 2.4, and 2.5
 
 ## [v1.1.0](https://github.com/chiefpansancolt/devise_materialize/releases/tag/v1.1.0)
 
-### Features
+### Repository Updates
 
 - Touch up Repo with various items (#2)
 
-### Bugs
+### Bug Fixes
 
 - Fix ERB markup (#1)
 
 ## [v1.0.0](https://github.com/chiefpansancolt/devise_materialize/releases/tag/v1.0.0)
 
-### Features
+### Features Added
 
 - Generate Materialize Views for Devise in multiple formats
 
-  Formats Supported:
+  **Formats Supported:**
     - HAML
     - SLIM
     - ERB
 
-  Form Types Supported:
+  **Form Types Supported:**
     - form_for
     - simple_form_for
