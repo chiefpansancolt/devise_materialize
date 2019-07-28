@@ -1,9 +1,10 @@
 # Devise Materialize
 
-[![CircleCI](https://circleci.com/gh/chiefpansancolt/devise_materialize.svg?style=svg)](https://circleci.com/gh/chiefpansancolt/devise_materialize)
-[![Maintainability](https://api.codeclimate.com/v1/badges/f1974d8e4f575d82d523/maintainability)](https://codeclimate.com/github/chiefpansancolt/devise_materialize/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/f1974d8e4f575d82d523/test_coverage)](https://codeclimate.com/github/chiefpansancolt/devise_materialize/test_coverage)
-[![Gem Version](https://badge.fury.io/rb/devise_materialize.svg)](https://badge.fury.io/rb/devise_materialize)
+![CircleCI](https://img.shields.io/circleci/build/gh/chiefpansancolt/devise_materialize/master?logo=circleci&style=flat-square)
+![Code Climate coverage](https://img.shields.io/codeclimate/coverage/chiefpansancolt/devise_materialize?logo=code%20climate&style=flat-square)
+![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/chiefpansancolt/devise_materialize?logo=code%20climate&style=flat-square)
+![GitHub release](https://img.shields.io/github/release/chiefpansancolt/devise_materialize?logo=github&style=flat-square)
+![Gem](https://img.shields.io/gem/dt/devise_materialize?logo=rubygems&style=flat-square)
 
 Devise Materialize gem is here to generate you devise view in a materialize styled format with or w/o simple_form.
 This gem is not intended to live forever in your gemfile. It must be in your gemfile to load the resources needed from the generator.
