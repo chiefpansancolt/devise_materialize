@@ -1,5 +1,7 @@
 # Devise Materialize
 
+NOTE: This project is not maintained anymore
+
 ![CircleCI](https://img.shields.io/circleci/build/gh/chiefpansancolt/devise_materialize/master?logo=circleci&style=flat-square)
 ![Code Climate coverage](https://img.shields.io/codeclimate/coverage/chiefpansancolt/devise_materialize?logo=code%20climate&style=flat-square)
 ![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/chiefpansancolt/devise_materialize?logo=code%20climate&style=flat-square)
